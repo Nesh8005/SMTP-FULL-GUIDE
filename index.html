@@ -78,6 +78,14 @@
 <li class="nav-item"><a href="#issue-thunderbird-hangs-at-checking-password-or-no-information-available" class="nav-link lvl-3">Issue: Thunderbird Hangs at "Checking Password" or "No Information Available"</a></li>
 <li class="nav-item"><a href="#issue-failed-to-connect-authentication-error" class="nav-link lvl-3">Issue: Failed to Connect (Authentication Error)</a></li>
 <li class="nav-item"><a href="#issue-is-the-server-broken-or-the-client-local-testing" class="nav-link lvl-3">Issue: Is the Server Broken or the Client? (Local Testing)</a></li>
+<li class="nav-item"><a href="#key-lessons-pro-tips" class="nav-link lvl-2">KEY LESSONS & PRO-TIPS</a></li>
+<li class="nav-item"><a href="#1-hostname-management" class="nav-link lvl-3">1. Hostname Management</a></li>
+<li class="nav-item"><a href="#2-network-troubleshooting" class="nav-link lvl-3">2. Network Troubleshooting</a></li>
+<li class="nav-item"><a href="#3-ssl-tls-in-lab-environments" class="nav-link lvl-3">3. SSL/TLS in Lab Environments</a></li>
+<li class="nav-item"><a href="#complete-command-reference" class="nav-link lvl-2">📋 COMPLETE COMMAND REFERENCE</a></li>
+<li class="nav-item"><a href="#server-setup-rocky-linux" class="nav-link lvl-3">Server Setup (Rocky Linux)</a></li>
+<li class="nav-item"><a href="#client-setup-ubuntu" class="nav-link lvl-3">Client Setup (Ubuntu)</a></li>
+<li class="nav-item"><a href="#verification-commands" class="nav-link lvl-3">Verification Commands</a></li>
 <li class="nav-item"><a href="#lab-complete" class="nav-link lvl-2">LAB COMPLETE</a></li>
             </ul>
         </aside>
@@ -1130,7 +1138,8 @@ QUIT</code></pre></div>
     <div class="info-row"><div class="info-label">Result</div><div class="info-val">Internet connectivity is restored to the Rocky Linux server.</div></div>
     <div class="notes-alert" style="margin: 1.5rem 0 0;"><p>If `ping 8.8.8.8` fails, try `curl -I https://github.com`. In VirtualBox NAT, ping (ICMP) is often blocked even when the internet works!</p></div>
     <div class="img-stack">
-      <div class="img-container"><img loading="lazy" src="C:/Users/dinee/.gemini/antigravity/brain/3023262f-b312-4193-b990-a2b0103e8ba2/uploaded_media_1769599330758.png" alt="Network Connectivity Lost" /></div>
+      <div class="img-container"><img loading="lazy" width="800" src="https://github.com/user-attachments/assets/1e953ed2-3539-4ebe-be22-629dccde2c2a" alt="Network Connectivity Lost" /></div>
+      <div class="img-container"><img loading="lazy" width="800" src="https://github.com/user-attachments/assets/4e1133e9-ae51-4446-bbe1-ebbb00ac01bb" alt="Verification Success" /></div>
     </div>
   </div>
 </div>
@@ -1144,10 +1153,8 @@ QUIT</code></pre></div>
     <div class="info-row"><div class="info-label">Result</div><div class="info-val">The "Confirm Security Exception" dialog appears instantly, allowing you to connect.</div></div>
     <div class="notes-alert" style="margin: 1.5rem 0 0;"><p>This is the #1 cause of infinite loading loops in lab environments.</p></div>
     <div class="img-stack">
-      <div class="img-container"><img loading="lazy" src="C:/Users/dinee/.gemini/antigravity/brain/3023262f-b312-4193-b990-a2b0103e8ba2/uploaded_media_1769646479702.png" alt="No Information Available" /></div>
-      <div class="img-container"><img loading="lazy" src="C:/Users/dinee/.gemini/antigravity/brain/3023262f-b312-4193-b990-a2b0103e8ba2/uploaded_media_1769648967575.png" alt="Certificate Hang" /></div>
-      <div class="img-container"><img loading="lazy" src="C:/Users/dinee/.gemini/antigravity/brain/3023262f-b312-4193-b990-a2b0103e8ba2/uploaded_media_1769649140334.png" alt="Extended Hang" /></div>
-      <div class="img-container"><img loading="lazy" src="C:/Users/dinee/.gemini/antigravity/brain/3023262f-b312-4193-b990-a2b0103e8ba2/uploaded_media_1769649830233.png" alt="Checking Password Loop" /></div>
+      <div class="img-container"><img loading="lazy" width="800" src="https://github.com/user-attachments/assets/fb4bca3f-d1ec-4e41-9c47-f313cffe639b" alt="Certificate Exception Dialog" /></div>
+      <div class="img-container"><img loading="lazy" width="800" src="https://github.com/user-attachments/assets/41935ac1-8c77-4b88-aca4-b2a59a3a6f05" alt="Certificate Warning" /></div>
     </div>
   </div>
 </div>
@@ -1171,11 +1178,65 @@ QUIT</code></pre></div>
     <div class="info-row"><div class="info-label">Purpose</div><div class="info-val">Isolates the problem by proving the server services are healthy before troubleshooting the Ubuntu client.</div></div>
     <div class="info-row"><div class="info-label">Result</div><div class="info-val">Confirms if Postfix (Port 25/465) and Dovecot (Port 993) are responding correctly.</div></div>
     <div class="img-stack">
-      <div class="img-container"><img loading="lazy" src="C:/Users/dinee/.gemini/antigravity/brain/3023262f-b312-4193-b990-a2b0103e8ba2/uploaded_media_1769646934397.png" alt="SMTP Local Test" /></div>
-      <div class="img-container"><img loading="lazy" src="C:/Users/dinee/.gemini/antigravity/brain/3023262f-b312-4193-b990-a2b0103e8ba2/uploaded_media_1769647366948.png" alt="IMAP Local Test" /></div>
+      <div class="img-container"><img loading="lazy" width="800" src="https://github.com/user-attachments/assets/1a4e170e-a249-42ab-a031-94411f15f9e2" alt="SMTP Local Test" /></div>
+      <div class="img-container"><img loading="lazy" width="800" src="https://github.com/user-attachments/assets/57b2eeb8-aec2-4ee8-8936-ea4ab1b815fa" alt="IMAP Local Test" /></div>
     </div>
   </div>
 </div>
+<div class="section-divider"></div>
+<h2 id="key-lessons-pro-tips" class="animate">💡 KEY LESSONS & PRO-TIPS</h2>
+<h3 id="1-hostname-management" class="animate">1. Hostname Management</h3>
+<p class="animate" style="color:var(--text-secondary); margin-bottom:1.5rem">* <strong>Warning:</strong> <code>hostnamectl</code> can reset network configuration including the default gateway. Always verify <code>ip route</code> after hostname changes.</p>
+<li class="animate" style="color:var(--text-secondary); margin-left:1.5rem; margin-bottom:0.5rem">Set your hostname <strong>BEFORE</strong> generating SSL certificates so the Common Name (CN) matches exactly.</li>
+<li class="animate" style="color:var(--text-secondary); margin-left:1.5rem; margin-bottom:0.5rem">Always use the FQDN (<code>bnaserver.bungkus.org</code>) rather than just the short name.</li>
+<h3 id="2-network-troubleshooting" class="animate">2. Network Troubleshooting</h3>
+<p class="animate" style="color:var(--text-secondary); margin-bottom:1.5rem">* ICMP ping failures don't always mean "no internet". Test with application-level protocols like <code>curl</code> or <code>openssl</code>.</p>
+<li class="animate" style="color:var(--text-secondary); margin-left:1.5rem; margin-bottom:0.5rem">In VirtualBox NAT, ping is often blocked by the host firewall while HTTPS traffic flows perfectly.</li>
+<h3 id="3-ssl-tls-in-lab-environments" class="animate">3. SSL/TLS in Lab Environments</h3>
+<p class="animate" style="color:var(--text-secondary); margin-bottom:1.5rem">* Self-signed certificates are perfect for testing but <strong>OCSP validation will always fail</strong>. Always disable OCSP in your client (Thunderbird).</p>
+<li class="animate" style="color:var(--text-secondary); margin-left:1.5rem; margin-bottom:0.5rem">Use <code>openssl s_client</code> to verify SSL services are responding before you even touch a GUI client.</li>
+<div class="section-divider"></div>
+<h2 id="complete-command-reference" class="animate">📋 COMPLETE COMMAND REFERENCE</h2>
+<h3 id="server-setup-rocky-linux" class="animate">Server Setup (Rocky Linux)</h3>
+<div class="cmd-block animate"><button class="cmd-copy">Copy</button><pre><code># Set Hostname
+sudo hostnamectl set-hostname bnaserver.bungkus.org
+
+# Configure Hosts
+echo "192.168.200.3 bnaserver.bungkus.org bnaserver" | sudo tee -a /etc/hosts
+
+# Install Services
+sudo dnf install postfix dovecot -y
+
+# Generate SSL/TLS Certs
+sudo openssl req -new -x509 -days 365 -nodes \
+  -out /etc/pki/tls/certs/bnaserver.pem \
+  -keyout /etc/pki/tls/private/bnaserver.key \
+  -subj "/C=MY/ST=KL/L=APU/O=SNA/CN=bnaserver.bungkus.org"
+
+# Firewall Configuration
+sudo firewall-cmd --permanent --add-service={smtp,smtps,submission,imap,imaps}
+sudo firewall-cmd --reload
+
+# Enable Services
+sudo systemctl enable --now postfix dovecot</code></pre></div>
+<h3 id="client-setup-ubuntu" class="animate">Client Setup (Ubuntu)</h3>
+<div class="cmd-block animate"><button class="cmd-copy">Copy</button><pre><code># Add Server to Hosts
+echo "192.168.200.3 bnaserver.bungkus.org" | sudo tee -a /etc/hosts
+
+# Manual Thunderbird Install
+cd ~/Downloads
+tar -xvf thunderbird-*.tar.xz
+sudo mv thunderbird /opt/
+sudo ln -sf /opt/thunderbird/thunderbird /usr/bin/thunderbird</code></pre></div>
+<h3 id="verification-commands" class="animate">Verification Commands</h3>
+<div class="cmd-block animate"><button class="cmd-copy">Copy</button><pre><code># Check Ports
+ss -tuln | grep -E '25|465|587|143|993'
+
+# Test Secure SMTP
+openssl s_client -starttls smtp -connect localhost:25
+
+# Test Secure IMAP
+openssl s_client -connect localhost:993</code></pre></div>
 <div class="section-divider"></div>
 <h2 id="lab-complete" class="animate">🎊 LAB COMPLETE</h2>
 <p class="animate" style="color:var(--text-secondary); margin-bottom:1.5rem">You have successfully:</p>
